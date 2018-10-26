@@ -6,9 +6,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 @RequestMapping(value = "/interface")
-public class InterfaceController {
-	@RequestMapping(method = RequestMethod.GET)
-	public String getInterfaceDetailsPage() {
-		return "interface";
-	}
+public class InterfaceController
+{
+    @RequestMapping(method = RequestMethod.POST)
+    public String getInterfaceDetailsPage()
+    {
+        return "interface";
+    }
 }

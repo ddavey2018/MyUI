@@ -8,11 +8,9 @@
 	<div class="mdl-tabs__panel is-active" id="starks-panel">
 		<link rel="stylesheet" href="../css/interfaces.css">
 		<div>
-			<a href="/interface">
 				<button id="add-interface"
 					class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
 					Add Interface</button>
-			</a>
 		</div>
 		<div class="table-card mdl-card mdl-shadow--2dp" style="">
 

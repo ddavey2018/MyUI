@@ -4,12 +4,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <title>Index</title>
 <%@ include file="headers/headers.jspf" %>
  <script src="../js/index.js"></script>
 </head>
 <body>
+<form id="navi-form" method="post" action="/" style="display:none;">
+	<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+	<input id="page" name="page"/>
+</form>
 <!-- Always shows a header, even in smaller screens. -->
         <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
           <header class="mdl-layout__header">

@@ -1,0 +1,23 @@
+#layout-card{
+	min-height:auto;
+	position:absolute;
+	overflow: visible;
+}
+
+.side-panel-holder{
+	position:fixed;
+	top:70px;
+	z-index:999;
+}
+
+.fixed-right{
+	right:0;
+}
+
+.side-panel .mdl-card__supporting-text{
+	overflow:visible;
+}
+
+.page-content.no-content{
+	height:400px;
+}
