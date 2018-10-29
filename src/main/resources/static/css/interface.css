@@ -1,6 +1,11 @@
 #layout-card{
-	min-height:auto;
+	
 	position:absolute;
+	
+}
+
+.mdl-card{
+	min-height:auto;
 	overflow: visible;
 }
 
@@ -20,4 +25,11 @@
 
 .page-content.no-content{
 	height:400px;
+}
+
+.popup-card{
+	position:fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
 }
