@@ -10,16 +10,27 @@ $(document).ready(function(){
 			var popup = window.popup(
 						{
 							contents: $contents,
+							buttons: [{
+								text : 'Close',float:'right',onClick:function(){}
+							}],
 							onLoad:function($popup){
+								$('.mdl-layout__header').css('z-index',1000);
 								var $layout = $('.mdl-layout');
 									$fixedHeader = $popup.find('#fixed-header');
 									$fixedHeader.prop('checked',$layout.hasClass('mdl-layout--fixed-header'));
 									componentHandler.upgradeElement($popup.find('.mdl-switch')[0]);
-									$fixedHeader.change(function(evt){
-										$layout.toggleClass('mdl-layout--fixed-header');
-									});
-									
-								}
+									$title = $popup.find('#title');
+									$title.val($layout.find('.mdl-layout-title').text());
+									componentHandler.upgradeElement($popup.find('.mdl-textfield')[0]);
+									$fixedHeader.change(this.onChangeFixedHeader);
+									$title.keyup(this.onKeyUpTitle);
+								},
+							onChangeFixedHeader : function(evt){
+								$('.mdl-layout').toggleClass('mdl-layout--fixed-header');
+							},
+							onKeyUpTitle : function(evt){
+								$('.mdl-layout').find('.mdl-layout-title').text($(evt.target).val());
+							}
 						}
 					);
 		});
