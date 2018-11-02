@@ -9,6 +9,7 @@
  <script src="../js/index.js"></script>
 </head>
 <body>
+
 <form id="navi-form" method="post" action="/" style="display:none;">
 	<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 	<input id="page" name="page"/>
@@ -40,6 +41,17 @@
           <main class="mdl-layout__content">
             <div class="page-content">
             </div>
+            <div>
+		<a href="${gmailUrl}">
+					<button id="loginToGmail"
+					class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+					Login to gmail</button></a>
+					</div>
+					<script>
+					var code = '${code}';
+					if(code){
+						console.log(code);
+					}</script>
           </main>
         </div>
        
