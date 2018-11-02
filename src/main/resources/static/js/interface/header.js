@@ -10,9 +10,7 @@ $(document).ready(function(){
 			var popup = window.popup(
 						{
 							contents: $contents,
-							buttons: [{
-								text : 'Close',float:'right',onClick:function(){}
-							}],
+							buttons: [],
 							onLoad:function($popup){
 								$('.mdl-layout__header').css('z-index',1000);
 								var $layout = $('.mdl-layout');
@@ -22,9 +20,13 @@ $(document).ready(function(){
 									$title = $popup.find('#title');
 									$title.val($layout.find('.mdl-layout-title').text());
 									componentHandler.upgradeElement($popup.find('.mdl-textfield')[0]);
+									getmdlSelect.init('.getmdl-select');
 									$fixedHeader.change(this.onChangeFixedHeader);
 									$title.keyup(this.onKeyUpTitle);
 								},
+							onClose : function(){
+								$('.mdl-layout__header').css('z-index','auto');
+							},
 							onChangeFixedHeader : function(evt){
 								$('.mdl-layout').toggleClass('mdl-layout--fixed-header');
 							},
